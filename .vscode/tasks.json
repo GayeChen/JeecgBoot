@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "停止Java服务",
+            "type": "shell",
+            "command": "pkill",
+            "args": ["-f", "JeecgSystemApplication"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "检查Java服务状态",
+            "type": "shell",
+            "command": "ps",
+            "args": ["aux"],
+            "options": {
+                "shell": {
+                    "executable": "/bin/zsh",
+                    "args": ["-c", "ps aux | grep -i jeecg | grep -v grep || echo '没有运行的Java服务'"]
+                }
+            },
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "检查端口占用",
+            "type": "shell",
+            "command": "lsof",
+            "args": ["-i", ":8080"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "强制停止8080端口服务",
+            "type": "shell",
+            "command": "sh",
+            "args": ["-c", "lsof -ti:8080 | xargs kill -9 2>/dev/null || echo '端口8080没有被占用'"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}
