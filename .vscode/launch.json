@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JeecgBoot Application",
+            "request": "launch",
+            "mainClass": "org.jeecg.JeecgSystemApplication",
+            "projectName": "jeecg-system-start",
+            "args": "",
+            "vmArgs": "-Dspring.profiles.active=dev -Dfile.encoding=UTF-8",
+            "env": {
+                "SPRING_PROFILES_ACTIVE": "dev"
+            },
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "cwd": "${workspaceFolder}/jeecg-boot/jeecg-module-system/jeecg-system-start"
+        }
+    ]
+}

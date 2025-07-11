@@ -1,0 +1,25 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.configuration.maven.userSettings": null,
+    "java.import.maven.enabled": true,
+    "java.maven.downloadSources": true,
+    "java.maven.downloadJavadoc": false,
+    "java.configuration.workspaceCacheLimit": 90,
+    "java.sources.organizeImports.starThreshold": 99,
+    "java.sources.organizeImports.staticStarThreshold": 99,
+    "java.format.settings.url": null,
+    "java.format.settings.profile": null,
+    "java.saveActions.organizeImports": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-17",
+            "path": "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",
+            "default": true
+        }
+    ],
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
+}
