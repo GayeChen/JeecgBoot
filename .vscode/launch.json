@@ -8,9 +8,10 @@
             "mainClass": "org.jeecg.JeecgSystemApplication",
             "projectName": "jeecg-system-start",
             "args": "",
-            "vmArgs": "-Dspring.profiles.active=dev -Dfile.encoding=UTF-8",
+            "vmArgs": "-Dspring.profiles.active=dev -Dfile.encoding=UTF-8 -Xmx2048m -Xms512m",
             "env": {
-                "SPRING_PROFILES_ACTIVE": "dev"
+                "SPRING_PROFILES_ACTIVE": "dev",
+                "JAVA_HOME": "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home"
             },
             "console": "internalConsole",
             "stopOnEntry": false,
